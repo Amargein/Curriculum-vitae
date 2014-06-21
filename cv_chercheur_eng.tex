@@ -1,0 +1,160 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{orange}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\usepackage[T1]{fontenc}	% Pour l'encodage des caractères, nécessaire au lieu de fontspec pour utiliser les kp-fonts
+\usepackage[light,fulloldstylenums,nott]{kpfonts}	% Permet d'utiliser les kp-fonts
+%\usepackage{xltxtra}	% charge automatiquement les paquets xunicode (pour la gestion de l'UTF8) et fontspec (pour la definition des fontes)
+%	\usepackage{libertine}
+%	\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.82]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{microtype}
+\usepackage[english]{babel}
+\usepackage{setspace}
+\usepackage[isbn=false, sorting=nyt, hyperref=true, url=false, citepages=omit, maxnames=4, minnames=1, bibstyle=verbose, citestyle=verbose-trad2, autocite=footnote]{biblatex}	% pour la gestion de la bibiliographie
+	\AtEveryBibitem{\clearname{author}}
+	\DeclareFieldFormat
+		[unpublished,proceedings]
+		{title}{\em #1\isdot}
+	\bibliography{publications_eng}
+\urlstyle{same}
+
+% personal data
+\firstname{Théo}
+\familyname{\textsc{Henri}}
+\title{Sociologist}                               % optional, remove / comment the line if not wanted
+\address{22 boulevard Solférino}{86\,000 Poitiers}{France}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+33~(0)~6~49~20~46~64}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{theo.henri@etu.univ-poitiers.fr}                               % optional, remove / comment the line if not wanted
+%\homepage{www.sociologeek.org}                         % optional, remove / comment the line if not wanted
+\extrainfo{DOB: December 24\textsuperscript{th}, 1991 \enskip\textbullet{}\quad Full clean driving licence \enskip\textbullet{}\quad Nationality: French}                 % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{photo}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\begin{spacing}{1.25}
+
+\section{Education \& Qualifications}
+\cventry{2012--Present}{Master's degree in Sociology (second year)}{University of Poitiers}{Poitiers}{}{(Sociology, Anthropology, Statistics.)
+	\begin{itemize}
+		\item Organisation of a study day;
+		\item writing of a scientific article;
+		\item creation of a discussion group of students about sociology.
+	\end{itemize}
+	\textbf{Master 1 dissertation} : \emph{Wikipedia: a realised utopia?} Sociological exploration of the filiation between the Wikipedia project and the encyclopaedist tradition from the \textsc{xviii}\textsuperscript{th} century. (Academic supervisor: Ludovic Gaussot.).}
+\cventry{2009--2012}{BA in Sociology (Hons)}{University of Poitiers}{Poitiers}{}{(Sociology, Anthropology, Statistics, History, Psychology.)}
+\cventry{2009}{Baccalauréat ES (Equivalent of A-Levels)}{Lycée Polyvalent Saint-André}{Niort}{}{}
+
+\section{Professional experience}
+%\cventry{June--July 2014}{Assistant in administrative management}{Presidency of the University of Poitiers (DIFOR)}{Poitiers}{}{Advising and assistance by phone during registration to futures students.}
+\cventry{January--April 2014}{Survey technician}{Presidency of the University of Poitiers (SEEP)}{Poitiers}{}{Administration of questionnaires by phone to former students.}
+\cventry{June--September 2013}{Assistant in administrative management}{Presidency of the University of Poitiers (DIFOR)}{Poitiers}{}{Advising and assistance by phone during registration to futures students.}
+\cventry{July--August 2011 and June--August 2012}{Employee}{Monoprix (City center)}{Poitiers}{}{My responsibilities included managing stock, placing products in the right place, organizing a shelf, giving advice to consumers (like finding the product they want or guide people to choose the wine they need).}
+\cventry{June--August 2010}{Cashiet}{Carrefour (Supermarket)}{Niort}{}{My responsibilities included managing money and having polite contact with consumers.}
+
+\section{Personal experience}
+\subsection{Associative commitment}
+\cventry{2011--2012 and 2013--2014}{Secretary}{APP3L {\footnotesize (Association Poitevine pour la Promotion de gnu/Linux et des Logiciels Libres)}}{Poitiers}{}{%\newline{}%
+%Detailed achievements:%
+    \begin{itemize}%
+        \item Writing of press releases;
+        \item writing of proceedings of meetings;
+        \item creation and conduct of working groups;
+        \item delivery of lectures about free softwares.
+    \end{itemize}}
+\cventry{2012--2013}{President}{APP3L}{Poitiers}{}{
+	Organisation of proceedings.
+}
+
+\section{Publications and communications}
+\nocite{*}
+\defbibheading{bibliography}[\bibname]{\subsection*{#1}}
+\printbibliography[keyword=Article non publié, title=Unpublished articles]
+
+\defbibheading{bibliography}[\bibname]{\subsection*{#1}}
+\printbibliography[keyword=Communication, title=Communications]
+
+\section{Skills}
+\subsection{Languages}
+\cvitemwithcomment{French}{Native speaker}{}
+\cvitemwithcomment{English}{Fluent}{}
+\hspace{.5em}{\small \cvitem{Translation}{Participation to sessions of collaborative translation from english to french for a blog.}}
+\cvitemwithcomment{German}{Elementary}{}
+
+\subsection{IT skills}
+\cvitem{Operating systems}{GNU/Linux, Mac OS X, Microsoft Windows.}
+\cvitem{Document preparation system}{\LaTeX, LibreOffice, Microsoft Office.}
+\cvitem{Statistic analysis}{ModaLisa, R.}
+%\cvitem{Development}{Bash.}
+\cvitem{Web programming}{HTML/CSS, PHP/SQL.}
+\cvitem{Graphics}{\textsc{Gimp}, Inkscape, Blender.}
+
+\section{Interests}
+\cvitem{Free softwares}{Member of an association from Paris (\emph{GUTenberg}) since 2011. (It promotes the free document preparation system \LaTeX{}.)}
+\cvitem{Multimedia}{Infographics 2D/3D, self-taught.}
+%\cvitem{Internet}{Webmaster et rédacteur d'un site personnel et professionnel.}
+\cvitem{Photography}{Analog photography in amateur.}
+\cvitem{Badminton}{Player in a club at competition level from 2003 to 2007.}
+\cvitem{Guitar}{Lesson taken from 2006 to 2009.}
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5}
+%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+
+%\section{References}
+%\begin{cvcolumns}
+%  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+%\end{cvcolumns}
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+
+\end{spacing}
+
+\end{document}
+
+
+%% end of file `template.tex'.

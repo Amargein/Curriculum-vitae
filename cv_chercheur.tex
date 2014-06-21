@@ -1,0 +1,185 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{orange}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\usepackage[T1]{fontenc}	% Pour l'encodage des caractères, nécessaire au lieu de fontspec pour utiliser les kp-fonts
+\usepackage[light,fulloldstylenums,nott]{kpfonts}	% Permet d'utiliser les kp-fonts
+%\usepackage{xltxtra}	% charge automatiquement les paquets xunicode (pour la gestion de l'UTF8) et fontspec (pour la definition des fontes)
+%	\usepackage{libertine}
+%	\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=.84]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{microtype}
+\usepackage[francais]{babel}
+\usepackage{setspace}
+\usepackage{hologo}
+\usepackage[isbn=false, sorting=nyt, hyperref=true, url=false, citepages=omit, maxnames=4, minnames=1, backend=biber,dateabbrev=false,bibstyle=verbose, citestyle=verbose-trad2, autocite=footnote]{biblatex}	% pour la gestion de la bibiliographie
+	\AtEveryBibitem{\clearname{author}}
+	\DeclareFieldFormat
+		[unpublished,proceedings]
+		{title}{\og{}#1\isdot\fg{}}
+	\bibliography{publications}
+\urlstyle{same}
+
+% personal data
+\firstname{Théo}
+\familyname{\textsc{Henri}}
+\title{Sociologue}                               % optional, remove / comment the line if not wanted
+\address{22 boulevard Solférino}{86\,000 \textsc{Poitiers}}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+33~(0)~6~49~20~46~64}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{theo.henri@etu.univ-poitiers.fr}                               % optional, remove / comment the line if not wanted
+\homepage{www.sociologeek.org}                         % optional, remove / comment the line if not wanted
+\extrainfo{Né le 24 décembre 1991 \enskip\textbullet{}\quad Permis B}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{photo}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\begin{spacing}{1.4}
+
+\section{Thématiques de recherche}
+\vspace{.5em} Sociologie de l'Internet, sociologie des technologies, sociologie des mouvements sociaux, sociologie des pratiques culturelles, sociologie des connaissances.
+
+\section{Formation}
+\cventry{2012--2014}{Université de Poitiers}{Master \og{}méthodes d'analyse du social\fg{} (option ACCES)}{}{}{(Sociologie, anthropologie, statistiques.)
+	\begin{itemize}
+		\item Animation d'une séance de communications ;
+		\item écriture d'un article scientifique (en respectant les normes éditoriales des revues) dans le cadre d'un enseignement d'écriture (\og{}Wikipédia, une encyclopédie en quête de légitimité\fg{});
+		\item création d'un collectif d'étudiants en sociologie (mise en place de tables rondes, d'ateliers méthodologiques et de présentations d'ouvrages).
+	\end{itemize}
+	\textbf{Mémoire de master 1} : \emph{Wikipédia : une utopie réalisée ?} (86~pages). Sous la direction de Ludovic~\textsc{Gaussot} (jury~:~Mathias~\textsc{Millet}). \\
+	\textbf{Mémoire de master 2} : \emph{fr.wikipedia, un espace d'existence et de reconnaissance} (?~pages). Sous la direction de Ludovic~\textsc{Gaussot} (jury : ?).
+}
+\cventry{2009--2012}{Université de Poitiers}{Licence de sociologie}{}{mention bien}{(Sociologie, anthropologie, statistiques, histoire, psychologie.)}
+\cventry{2009}{Lycée Polyvalent Saint-André, Niort}{Baccalauréat Économique et social (spécialité économie)}{}{mention assez-bien}{}
+
+\section{Publications et communications}
+\nocite{*}
+\defbibheading{bibliography}[\bibname]{\subsection*{#1}}
+\printbibliography[keyword=Article non publié, title=Articles non publiés]
+
+\defbibheading{bibliography}[\bibname]{\subsection*{#1}}
+\printbibliography[keyword=Communication, title=Communications]
+
+\section{Valorisation de la recherche}
+\cventry{2012--2014}{Université de Poitiers (recherche de master)}{Étude sociologique sur la Wikipédia francophone}{}{}{Recherche portant sur les contributeurs à la version francophone de l'encyclopédie libre et collaborative Wikipédia. Le premier volet portait sur la construction de l'objet sociologique par le biais d'une analyse du projet en lui même, en regard avec les canons encyclopédistes du \textsc{xviii}\ieme{}~siècle. La seconde partie de l'enquête s'est concentrée sur les contributeurs, leurs caractéristiques sociales et leurs pratiques de participation (avec une considération de leur engagement dans le projet).\\ Réalisation d'entretiens biographiques auprès de contributeurs ; analyse des pages de discussion, de projet, des pages utilisateurs et des articles du site ; observation d'ateliers de contribution ; retraitement d'une enquête indigène passée auprès de l'ensemble des contributeurs ; travail sur archives.}
+\cventry{2013}{Université de Poitiers (enquête collective)}{\og{}Le service civique vu par les responsables d'associations\fg{}}{}{}{Réponse à une commande de la DRJSCS Poitou-Charentes concernant une étude sur les services civiques de la région Poitou-Charentes. Une partie de l'enquête a été prise en charge par la promotion de master 2 (l'enquête principale étant conduite par les master 2). Mise en place d'une enquête collective, réalisation d'entretiens et analyse thématique des retranscriptions. }
+\cventry{2012}{Université de Poitiers (enquête collective)}{\og{}Les ripeurs\fg{}}{}{}{Enquête portant sur les ripeurs de Poitiers, sous l'angle d'approche du rapport au temps et au corps. L'objectif était de comprendre comment l'organisation du travail des ripeurs influence leur vie au quotidien, à la fois dans mais aussi hors du travail. La recherche a pris la forme d'observations de tournées de ramassage des ordures, ainsi que d'entretiens biographiques effectués au domicile des enquêtés.}
+\cventry{2012}{Université de Poitiers (enquête collective)}{\og{}Les pharmaciens d'officine\fg{}}{}{}{Recherche portant sur les pharmaciens en officine dans un contexte d'ouverture de la vente des médicaments aux grandes-surfaces. L'enquête a permis de mettre au jour les rôles attendus des pharmaciens et leurs résistances professionnelles face à la vente de médicaments hors des officines. Mise en place d'observations et d'entretiens.}
+
+\section{Organisation de journées d'étude et de séminaires}
+\cventry{14--15 avril 2014}{Université de Poitiers}{Journées d'étude Poitiers-Limoges}{}{}{Organisation logistique, programmation (conception graphique du programme), mise en place de journées d'étude communes aux master \og{}recherche\fg{} des universités de Poitiers et Limoges.}
+
+\section{Expérience professionnelle}
+\cventry{Juin--juillet 2014}{Adjoint en gestion administrative}{Présidence de l'Université de Poitiers (DIFOR)}{Poitiers}{}{Conseil et assistance par téléphone en période d'inscriptions auprès des futurs étudiants et parents d'étudiants.}
+\cventry{Janvier--avril 2014}{Technicien d'enquête}{Présidence de l'Université de Poitiers (SEEP)}{Poitiers}{}{Passation de questionnaires par téléphone auprès des anciens diplômés de l'Université via l'interface \emph{Limesurvey}.}
+\cventry{Juin--septembre 2013}{Adjoint en gestion administrative}{Présidence de l'Université de Poitiers (DIFOR)}{Poitiers}{}{Conseil et assistance par téléphone en période d'inscriptions auprès des futurs étudiants et parents d'étudiants.}
+
+\section{Expérience personnelle}
+\subsection{Engagement associatif}
+\cventry{2011--2012 et 2013--2014}{Secrétaire}{APP3L {\footnotesize (Association Poitevine pour la Promotion de gnu/Linux et des Logiciels Libres)}}{Poitiers}{}{%\newline{}%
+%Detailed achievements:%
+    \begin{itemize}%
+        \item Rédaction de communiqués de presse ;
+        \item rédaction de comptes-rendus de réunions et de conseils d'administration ;
+        \item mise en place et conduite d'ateliers de formation ;
+        \item réalisation de conférences portant sur des logiciels informatiques ;
+        \item prise en charge d'ateliers de formation sur des logiciels informatiques ;
+        \item gestion de relations inter-associations.
+    \end{itemize}}
+\cventry{2012--2013}{Président}{APP3L}{Poitiers}{}{
+	Organisation de cycles de conférences :
+		\begin{itemize}%
+			\item construction d'une programmation (et rédaction du programme) ;
+			\item contact d'intervenants ;
+			\item animation de conférences.
+		\end{itemize}
+}
+
+\section{Compétences}
+\subsection{Langues}
+\cvitemwithcomment{Anglais}{Courant}{Niveau C2}
+\hspace{.5em}{\small \cvitem{Traduction}{Participation à des sessions de traduction collaborative d'articles de l'anglais vers le français pour le blog \url{http://framablog.org}.}}
+\cvitemwithcomment{Allemand}{Notions}{Niveau A2}
+
+\subsection{Informatique}
+\cvitem{Système d'exploitation}{GNU/Linux, Mac OS X, Microsoft Windows.}
+\cvitem{Composition de documents}{\LaTeX, LibreOffice, Microsoft Office.}
+\cvitem{Traitement statistique}{ModaLisa, R.}
+\cvitem{Gestion de bibliographie}{\hologo{BibTeX}, Zotero, Mendeley.}
+%\cvitem{Programmation}{Bash.}
+\cvitem{Développement web}{HTML/CSS, PHP/SQL, CMS WordPress, Drupal.}
+\cvitem{Graphisme}{\textsc{Gimp}, Inkscape, Blender.}
+\cvitem{Administration de sites}{Drupal, Wordpress, \textsc{Spip}.}
+%\cvdoubleitem{GNU/Linux}{Niveau avancé}{\LaTeX{}}{Niveau avancé}
+%\cvdoubleitem{Mac OS X}{Niveau avancé}{LibreOffice}{Niveau avancé}
+%\cvdoubleitem{HTML \& CSS}{Niveau intermédiaire}{PHP \& SQL}{Niveau débutant}
+%\cvdoubleitem{ModaLisa}{Niveau intermédiaire}{R}{Niveau débutant}
+
+\section{Centres d'intérêt}
+\cvitem{Logiciels libres}{Membre de l'association parisienne \emph{GUTenberg} depuis 2011 (promotion du système de composition de documents \LaTeX).}
+\cvitem{Multimédia}{Infographie 2D/3D, apprentissage en autonomie.}
+\cvitem{Internet}{Webmaster et rédacteur d'un site personnel et professionnel.}
+\cvitem{Photographie}{Prise de photographies argentiques en amateur.}
+\cvitem{Badminton}{Membre d'un club à un niveau compétition de 2003 à 2007.}
+\cvitem{Guitare}{Apprentissage au sein d'une association de 2006 à 2009.}
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5}
+%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+
+%\section{References}
+%\begin{cvcolumns}
+%  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+%\end{cvcolumns}
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+
+\end{spacing}
+
+\end{document}
+
+
+%% end of file `template.tex'.
